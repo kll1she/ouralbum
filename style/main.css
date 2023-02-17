@@ -1,0 +1,371 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+div, p, input, button, form, span, a, ul, li {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+/*HEADER*/
+
+header {
+    background: rgba(185, 133, 89, 1.0);
+    background: -webkit-radial-gradient(bottom right, rgba(185, 133, 89, 1.0), rgba(36, 30, 68, 1.0));
+    background: -moz-radial-gradient(bottom right, rgba(185, 133, 89, 1.0), rgba(36, 30, 68, 1.0));
+    background: radial-gradient(to top left, rgba(185, 133, 89, 1.0), rgba(36, 30, 68, 1.0));
+    color: #fff;
+    padding: 25% 0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.timer {
+    display: flex;
+    justify-content: center;
+}
+.timer__items {
+    display: flex;
+    font-size: 2rem;
+}
+.timer__item {
+    position: relative;
+    min-width: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+}
+.timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -15px;
+}
+
+
+/*MOMENTS*/
+
+.sort {
+    color: #000;
+    font-size: 4vw;
+    margin-top: 3%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+.hidden {
+    display: flex;
+}
+.filter {
+    color: #A9A9A9;
+    text-decoration: underline;
+    font-size: 4vw;
+    margin: 0;
+    margin-top: 3%;
+}
+.sort-button {
+    background: #fff;
+    width: 100%;
+    padding: 3% 0;
+    font-size: 4vw;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 3%;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.sort-function {
+    flex-direction: column-reverse;
+}
+.moments {
+    margin-bottom: 10%;
+}
+.wrapper {
+    display: flex;
+    margin-top: 10%;
+}
+.offer {
+    color: #000;
+}
+
+/*Картинка слева*/
+.img-left {
+    width: 50%;
+    height: 100%;
+    margin-right: 5%;
+}
+.date-left {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 6vw;
+    margin: 0;
+    margin-right: 0;
+    width: 50vw;
+}
+.block-text-left {
+    font-size: 4vw;
+    margin: 0;
+    margin-top: 7%;
+    margin-right: 0;
+    width: 50vw;
+}
+
+.img-container {
+    width: 50%;
+    max-width: 270px;
+    max-height: 360px;
+    margin-right: 5%;
+}
+.img-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* CONGRATS */
+
+.congrats {
+    background: #403249;
+    padding: 10% 0;
+}
+.congrats-text {
+    font-size: 4.5vw;
+    margin: 0;
+    line-height: 1.5em;
+}
+.congrats a {
+    color: #fff;
+}
+
+/*ADAPTIVE*/
+
+/*576px - 768px*/
+@media screen and (min-width: 576px) {
+    header {
+        padding: 144px 0;
+    }
+    .container {
+        width: 540px;
+    }
+    .heading {
+        font-size: 1.7rem;
+    }
+    .timer__item {
+        font-size: 3.4rem;
+    }
+    .timer__item::before {
+        font-size: 1.4rem;
+    }
+    .timer__item:not(:last-child)::after {
+        right: -24px;
+    }
+    .moments {
+        margin-bottom: 54px;
+    }
+    .wrapper {
+        max-width: 520px;
+        margin: 0 auto;
+        margin-top: 54px;
+    }
+    .img-container {
+        max-width: 260px;
+        max-height: 346.66px;
+    }
+    .img-content {
+        width: 260px;
+        height: 100%;
+    }
+    .date, .date-left {
+        font-size: 34.5px;
+        width: auto;
+    }
+    .block-text, .block-text-left {
+        font-size: 23px;
+        width: auto;
+    }
+    .congrats-text {
+        font-size: 25.8px;
+    }
+    .congrats {
+        padding: 57.5px 0;
+    }
+    .sort-button {
+        width: 518px;
+        height: 63px;
+        padding: 16px 0;
+        font-size: 24px;
+        margin-top: 16px;
+    }
+    .sort {
+        margin-top: 16px;
+    }
+    .filter {
+        font-size: 24px;
+        margin-top: 16px;
+        margin-left: 10px;
+    }
+}
+
+/*768px - 992px*/
+@media screen and (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+    .title {
+        font-size: 85px;
+    }
+    .text {
+        font-size: 30px;
+        width: 377px;
+    }
+    .img-container {
+        max-width: 260px;
+        max-height: 346.66px;
+    }
+    .img-content {
+        width: 260px;
+        height: 100%;
+    }
+    .wrapper {
+        margin: 0 auto;
+        margin-top: 54px;
+    }
+    .flex {
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .filter {
+        margin-left: 100px;
+    }
+}
+
+/*992px - 1200px*/
+@media screen and (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+    .heading {
+        font-size: 3rem;
+    }
+    .timer__item {
+        font-size: 6rem;
+    }
+    .timer__item::before {
+        font-size: 2rem;
+    }
+    .timer__item:not(:last-child)::after {
+        right: -30px;
+    }
+    .flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .wrapper {
+        max-width: 465px;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .img-container {
+        max-width: 232.5px;
+        max-height: 310px;
+    }
+    .img-content {
+        width: 232.5px;
+        height: 100%;
+    }
+    .date, .date-left {
+        font-size: 31px;
+    }
+    .block-text, .block-text-left {
+        font-size: 20px;
+    }
+    .congrats-text {
+        font-size: 25.8px;
+    }
+    .congrats {
+        padding: 57.5px 0;
+    }
+    .sort {
+        display: none;
+    }
+    .filter {
+        display: none;
+    }
+}
+
+/*1200px - 1400px*/
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+    .flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .wrapper {
+        margin-top: 60px;
+        max-width: 540px;
+    }
+    .moments {
+        margin-bottom: 60px;
+    }
+     .title {
+        font-size: 95px;
+    }
+    .text {
+        font-size: 35px;
+        width: 580px;
+    }
+    .img-container {
+        max-width: 270px;
+        max-height: 360px;
+        margin-right: 5%;
+    }
+    .img-content {
+        width: 270px;
+        height: 100%;
+    }
+    .date, .date-left {
+        font-size: 34.5px;
+    }
+    .block-text, .block-text-left {
+        font-size: 23px;
+    }
+    .congrats-text {
+        font-size: 25.8px;
+    }
+    .congrats {
+        padding: 57.5px 0;
+    }
+}
